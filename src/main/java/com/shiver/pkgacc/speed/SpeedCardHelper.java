@@ -4,6 +4,7 @@ import com.shiver.pkgacc.config.PackagedAccelerationConfig;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import thelm.packagedauto.tile.TileBase;
+import thelm.packagedauto.tile.TileUnpackager;
 
 public class SpeedCardHelper {
 
@@ -12,7 +13,7 @@ public class SpeedCardHelper {
     private SpeedCardHelper() {}
 
     public static boolean isSupported(TileEntity tile) {
-        return tile instanceof TileBase && ((TileBase)tile).getEnergyStorage().getMaxEnergyStored() > 0;
+        return tile instanceof TileBase && !(tile instanceof TileUnpackager) && ((TileBase)tile).getEnergyStorage().getMaxEnergyStored() > 0;
     }
 
     public static int getCards(TileEntity tile) {
