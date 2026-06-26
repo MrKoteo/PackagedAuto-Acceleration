@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"RGR",
+		"GPG",
+		"RGR"
+	],
+	"key": {
+		"R": {
+			"item": "minecraft:redstone"
+		},
+		"G": {
+			"item": "minecraft:gold_ingot"
+		},
+		"P": {
+			"item": "packagedauto:package_component"
+		}
+	},
+	"result": {
+		"item": "packaged_acceleration:speed_card"
+	}
+}
